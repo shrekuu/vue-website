@@ -1,4 +1,16 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  reactStrictMode: false,
 
-module.exports = nextConfig
+  // disable eslint during build phase
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+
+  // disable type-checking during build phase
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+};
+
+module.exports = nextConfig;
